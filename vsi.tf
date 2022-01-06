@@ -3,7 +3,7 @@ resource "ibm_is_instance" "vsi01" {
   boot_volume {
     name = "vsi01-boot-volume"
   }
-  image = "r006-2ab9b47b-b13e-4d68-ae91-98124d7fc217"
+  image = "r042-92d1cd12-f014-4b9a-abf8-c5ca6494a9e5"
   keys = [data.ibm_is_ssh_key.sshkey.id]
   name = "${ibm_is_vpc.vpc.name}-is-instance-01"
   primary_network_interface {
