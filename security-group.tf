@@ -14,8 +14,3 @@ resource "ibm_is_security_group_rule" "vpc_security_group_rule_outbound_all" {
   direction = "outbound"
   group = ibm_is_security_group.vpc_security_group_default.id
 }
-
-resource "ibm_is_security_group_target" "vpc_security_group_target" {
-  security_group = ibm_is_security_group.vpc_security_group_default.id
-  target = ibm_is_instance.vsi01.primary_network_interface[0].id
-}
