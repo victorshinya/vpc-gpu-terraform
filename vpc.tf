@@ -1,7 +1,5 @@
 resource "ibm_is_vpc" "vpc" {
   address_prefix_management = "manual"
-  default_network_acl_name = "acl-${var.vpc_name}"
-  default_security_group_name = "sg-${var.vpc_name}"
   default_routing_table_name = "rt-${var.vpc_name}"
   name = var.vpc_name
   resource_group = data.ibm_resource_group.default.id
