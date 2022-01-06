@@ -23,5 +23,4 @@ resource "ibm_is_floating_ip" "vsi-fip" {
   resource_group = data.ibm_resource_group.default.id
   tags = ["schematics"]
   target = ibm_is_instance.vsi01.primary_network_interface[0].id
-  zone = local.zone_1
 }
